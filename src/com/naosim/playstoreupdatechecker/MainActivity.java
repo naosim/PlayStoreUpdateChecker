@@ -10,7 +10,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		//Start polling service
-		PollingUtils.startPollingService(this, 5, PollingService.class, PollingService.ACTION);
+		PollingUtils.startPollingService(this, 10 * 60, PollingService.class, PollingService.ACTION);
 	}
 	
 	@Override
