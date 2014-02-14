@@ -1,4 +1,4 @@
-package com.ryantang.rtpollingdemo;
+package com.naosim.playstoreupdatechecker;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.util.Log;
 /**
  * Polling service
  * @Author Ryan
@@ -13,7 +14,7 @@ import android.os.IBinder;
  */
 public class PollingService extends Service {
 
-	public static final String ACTION = "com.ryantang.service.PollingService";
+	public static final String ACTION = "com.naosim.playstoreupdatechecker.PollingService";
 	
 	private Notification mNotification;
 	private NotificationManager mManager;
@@ -63,11 +64,11 @@ public class PollingService extends Service {
 	class PollingThread extends Thread {
 		@Override
 		public void run() {
-			System.out.println("Polling...");
+			Log.i("PollingThread", "Polling...");
 			count ++;
 			if (count % 5 == 0) {
 				showNotification();
-				System.out.println("New message!");
+				Log.i("PollingThread", "New message!");
 			}
 		}
 	}
@@ -75,7 +76,6 @@ public class PollingService extends Service {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		System.out.println("Service:onDestroy");
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.ryantang.rtpollingdemo;
+package com.naosim.playstoreupdatechecker;
 
 import android.app.Activity;
 import android.app.NotificationManager;

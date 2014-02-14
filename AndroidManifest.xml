@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ryantang.rtpollingdemo"
+    package="com.naosim.playstoreupdatechecker"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ryantang.rtpollingdemo.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,9 +27,9 @@
         <activity android:name=".MessageActivity"/>
         
         <!-- Polling Service -->
-        <service android:name="com.ryantang.rtpollingdemo.PollingService">
+        <service android:name="com.naosim.playstoreupdatechecker.PollingService">
             <intent-filter>
-                <action android:name="com.ryantang.service.PollingService"/>
+                <action android:name="com.naosim.playstoreupdatechecker.PollingService"/>
             </intent-filter>
         </service>
         
